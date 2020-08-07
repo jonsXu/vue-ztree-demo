@@ -11,7 +11,9 @@
 
 <script>
 // @ is an alias to /src
-import TreeNode from '@/components/treeNode.vue'
+const pro = process.env.NODE_ENV 
+
+import TreeNode from '../components/treeNode.vue'
 import { white } from 'color-name';
 import { setInterval } from 'timers';
 
@@ -324,11 +326,14 @@ export default {
 	.ztree li a input.rename {height:14px; width:80px; padding:0; margin:0;
 		font-size:12px; border:1px #7EC4CC solid; *border:0px}
 	.ztree li span {line-height:16px; margin-right:2px; top: 3px; display: inline-block;}
-	.ztree li span.button {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
+	.ztree li span.button.pro {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
+		border:0 none; cursor: pointer;outline:none;
+		background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
+		background-image:url("~public/image/ztree/zTreeStandard.png"); *background-image:url("~public/image/ztree/zTreeStandard.gif")}
+	.ztree li span.button.dev {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
 		border:0 none; cursor: pointer;outline:none;
 		background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
 		background-image:url("../../public/image/ztree/zTreeStandard.png"); *background-image:url("../../public/image/ztree/zTreeStandard.gif")}
-
 	.ztree li span.button.chk {width:13px; height:13px; margin:0 3px 0 0; cursor: auto}
 	.ztree li span.button.chk.checkbox_false_full {background-position:0 0}
 	.ztree li span.button.chk.checkbox_false_full_focus {background-position:0 -14px}

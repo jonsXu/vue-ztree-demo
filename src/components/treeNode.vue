@@ -84,7 +84,7 @@ export default {
 	},
 	//当前节点的前置图标 switch图标
 	spanClassVal(){
-		let className = `switch button level${this.node.treeLevel} ${this.place}_${this.prefixClass}`
+		let className = `switch button level${this.node.treeLevel} ${this.place}_${this.prefixClass} ${this.pro=='development'?'dev':'pro'}`
 		return className
 	},
 	//a标签样式
@@ -102,14 +102,14 @@ export default {
 	},
 	//iconClass
 	iconClass(){
-		return `ico_${this.prefixClass}`
+		return `ico_${this.prefixClass} ${this.pro=='development'?'dev':'pro'}`
 	},
 	//选择框样式
 	checkClassVal(){
 		let className = ''
 		if(this.node.checkStatu==0){
 			//没有勾选
-			className="checkbox_false_full"
+			className="checkbox_false_full "
 		}else if(this.node.checkStatu==1){
 			//半选
 			className = 'checkbox_true_part'
@@ -117,13 +117,14 @@ export default {
 			//全选
 			className = 'checkbox_true_full'
 		}
-		return className
+		return className+`${this.pro=='development'?'dev':'pro'}`
 	}
   },
   data(){
 	  return {
 		  node:{},
 		  data:{},
+		  pro : process.env.NODE_ENV 
 	  }
   },
   created(){

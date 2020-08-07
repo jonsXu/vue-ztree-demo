@@ -2,6 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <span :class="setClass">
+sdadsadsad
+    </span>
     <tree :listData="list" :openCheck="true"></tree>
   </div>
 </template>
@@ -16,6 +19,11 @@ export default {
     HelloWorld,
     Tree
   },
+  computed:{
+    setClass(){
+      return this.pro =="development"?'red':'black'
+    }
+  },
   data(){
     return {
       list:[
@@ -23,8 +31,17 @@ export default {
         {name:'李三',children:[{name:"李二炮"},{name:"李da炮"},{name:"李san炮",children:[{name:'李三枪'}]}]},
         {name:'王三',children:[{name:"王二炮"},{name:"王da炮"},{name:"王san炮",children:[{name:'王三枪',children:[{name:'王三刀'}]}]}]},
         {name:'徐三',children:[{name:"徐二炮"},{name:"徐da炮"},{name:"徐san炮"}]},
-      ]
+      ],
+      pro : process.env.NODE_ENV 
     }
   }
 }
 </script>
+<style lang="scss">
+.red{
+  color:red
+}
+.blue{
+  color:blue
+}
+</style>
