@@ -10,20 +10,10 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+###说明
+采用ztree插件的部分样式，写了的一个树形组件
+目前功能有：1.展开收起
+           2.复选框的开启和联动选择
