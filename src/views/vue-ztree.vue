@@ -301,7 +301,7 @@ export default {
 	    background-color: transparent;
 	    background-repeat: no-repeat;
 	    background-attachment: scroll;
-	    background-image: url("~public/image/ztree/zTreeStandard.png");
+	    background-image: url("../../public/image/ztree/zTreeStandard.png");
 	}
 
 	ul.ztree {border:1px solid #ddd;background: #ffffff;width:100%;height:auto;overflow-y:scroll;overflow-x:auto;}
@@ -310,7 +310,7 @@ export default {
 	.ztree {margin:0; padding:5px; color:#333 ;}
 	.ztree li{position: relative;padding:0; margin:0; list-style:none; line-height:18px; text-align:left; white-space:nowrap; outline:0;}
 	.ztree li ul{ margin:0; padding:0 0 0 18px}
-	.ztree li ul.line{ background:url('~public/image/ztree/line_conn.gif') 0 0 repeat-y;}
+	.ztree li ul.line{ background:url('../../public/image/ztree/line_conn.gif') 0 0 repeat-y;}
 
 	.ztree li a {padding:1px 3px 0 5px; margin:0; cursor:pointer; height: 18px; color:#333; background-color: transparent;
 		text-decoration:none; vertical-align:top;}
@@ -327,7 +327,7 @@ export default {
 	.ztree li span.button {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
 		border:0 none; cursor: pointer;outline:none;
 		background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
-		background-image:url("~public/image/ztree/zTreeStandard.png"); *background-image:url("~public/image/ztree/zTreeStandard.gif")}
+		background-image:url("../../public/image/ztree/zTreeStandard.png"); *background-image:url("../../public/image/ztree/zTreeStandard.gif")}
 
 	.ztree li span.button.chk {width:13px; height:13px; margin:0 3px 0 0; cursor: auto}
 	.ztree li span.button.chk.checkbox_false_full {background-position:0 0}
@@ -382,7 +382,7 @@ export default {
 
 	span.tmpzTreeMove_arrow {width:16px; height:16px; display: inline-block; padding:0; margin:2px 0 0 1px; border:0 none; position:absolute;
 		background-color:white; background-repeat:no-repeat; background-attachment: scroll;
-		background-position:-110px -80px; background-image:url("~public/image/ztree/zTreeStandard.png"); *background-image:url("~public/image/ztree/zTreeStandard.gif")}
+		background-position:-110px -80px; background-image:url("../../public/image/ztree/zTreeStandard.png"); *background-image:url("../../public/image/ztree/zTreeStandard.gif")}
 
 	ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height:auto;overflow:hidden; 
 	             background-color:#cfcfcf; border:1px #00B83F dotted; opacity:0.8; filter:alpha(opacity=80)}
