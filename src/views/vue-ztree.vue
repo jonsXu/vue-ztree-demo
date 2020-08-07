@@ -11,7 +11,7 @@
 
 <script>
 // @ is an alias to /src
-import TreeNode from '@/components/treeNode.vue'
+import TreeNode from '../components/treeNode.vue'
 import { white } from 'color-name';
 import { setInterval } from 'timers';
 
