@@ -2,10 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <span :class="setClass">
-sdadsadsad
-    </span>
-    <tree :listData="list" :openCheck="true"></tree>
+    
   </div>
 </template>
 
@@ -32,6 +29,7 @@ export default {
         {name:'王三',children:[{name:"王二炮"},{name:"王da炮"},{name:"王san炮",children:[{name:'王三枪',children:[{name:'王三刀'}]}]}]},
         {name:'徐三',children:[{name:"徐二炮"},{name:"徐da炮"},{name:"徐san炮"}]},
       ],
+      showTree:false,
       pro : process.env.NODE_ENV 
     }
   }

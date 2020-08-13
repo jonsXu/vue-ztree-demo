@@ -6,35 +6,51 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3>Demo</h3>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
+      <li><a @click="showTreeDom" target="_blank" rel="noopener">tree</a></li>
+      <li><a @click="showEditor" target="_blank" rel="noopener">ueditor</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
     </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div style="height:20px;"></div>
+    <tree v-if="showTree" :listData="list" :openCheck="true"></tree>
+    <Editor v-if="showEditorDom" :id="editorId" :doType="['plugin','design','insert','edit']"></Editor>
   </div>
 </template>
 
 <script>
+import Tree from "@/views/vue-ztree.vue"
+import Editor from "@/views/ueditor/index.vue"
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    Tree,
+    Editor
+  },
+  data(){
+    return {
+      list:[
+        {name:'张三',children:[{name:"张二炮"},{name:"张da炮"},{name:"张san炮"}]},
+        {name:'李三',children:[{name:"李二炮"},{name:"李da炮"},{name:"李san炮",children:[{name:'李三枪'}]}]},
+        {name:'王三',children:[{name:"王二炮"},{name:"王da炮"},{name:"王san炮",children:[{name:'王三枪',children:[{name:'王三刀'}]}]}]},
+        {name:'徐三',children:[{name:"徐二炮"},{name:"徐da炮"},{name:"徐san炮"}]},
+      ],
+      showTree:false,
+      pro : process.env.NODE_ENV ,
+      editorId:'editorDemo',
+      showEditorDom:false
+    }
+  },
+  methods:{
+    showTreeDom(){
+      this.showTree = !this.showTree
+    },
+    showEditor(){
+      this.showEditorDom = !this.showEditorDom
+    }
   }
 }
 </script>
@@ -54,5 +70,7 @@ li {
 }
 a {
   color: #42b983;
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>

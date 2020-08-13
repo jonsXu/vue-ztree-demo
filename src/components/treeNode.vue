@@ -6,10 +6,10 @@
 	<span v-if="node.openCheck" class="button chk" :class="checkClassVal" type="tree-node-check" @click="checkNode"></span>	
 		<a :class="aClassVal">
 			<span class="button" :class='iconClass'></span>
-			<span class="node_name">{{data.name}} {{a}}</span>
+			<span class="node_name">{{data.name}}</span>
 		</a>
 		<ul v-if="data.children" v-show="node.prefix" :class="ulClassVal">
-			<tree-node v-for="(item, i) in data.children" :nodeData="item" :nodeObject="item.nodeObject" :key="i" @checkChange="checkChange" :a="a"></tree-node>
+			<tree-node v-for="(item, i) in data.children" :nodeData="item" :nodeObject="item.nodeObject" :key="i" @checkChange="checkChange"></tree-node>
 		</ul>
 
   	</li>
@@ -23,9 +23,6 @@ export default {
     
   },
   props:{
-	  	a:{
-			  type:String
-		  },
 		nodeData:{
 			type:Object
 		},//当前节点的数据对象

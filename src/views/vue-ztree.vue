@@ -2,7 +2,7 @@
 	<div class="ztree_content_wrap">
 		<div class="zTreeDemoBackground left">
 			<ul class="ztree">
-				<TreeNode v-for="(item, i) in dataArray" :key="i" :nodeData="item" :nodeObject="item.nodeObject" @checkChange="checkChange" :a="test"></TreeNode>
+				<TreeNode v-for="(item, i) in dataArray" :key="i" :nodeData="item" :nodeObject="item.nodeObject" @checkChange="checkChange"></TreeNode>
 			</ul>
 		</div>
 	</div>
@@ -33,13 +33,6 @@ export default {
 	}
   },
   computed:{
-	  test(){
-		  var  date = null
-		  var flag = true
-		  setInterval(()=>{ this.date = new Date().toString()},1000)
-		  date =  this.date
-		  return date
-	  }
   },
   data(){
 	  return{
@@ -310,7 +303,7 @@ export default {
 	    background-image: url("../../public/image/ztree/zTreeStandard.png");
 	}
 
-	ul.ztree {border:1px solid #ddd;background: #ffffff;width:100%;height:auto;overflow-y:scroll;overflow-x:auto;}
+	ul.ztree {border:1px solid #ddd;background: #ffffff;width:100%;height:auto;overflow-x:auto;padding: 10px;box-sizing: border-box}
 
 	.ztree * {padding:0; margin:0; font-size:12px; font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif}
 	.ztree {margin:0; padding:5px; color:#333 ;}

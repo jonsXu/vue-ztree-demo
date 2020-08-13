@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Tree from '../views/vue-ztree.vue'
+import Editor from '../views/ueditor/index.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -14,6 +15,11 @@ Vue.use(VueRouter)
     path: '/tree',
     name: 'Tree',
     component: Tree
+  },
+  {
+    path: '/editor',
+    name: 'Editor',
+    component: Editor
   },
   {
     path: '/about',
