@@ -104,7 +104,7 @@ export default {
 			  
 		  })
 	  },
-	  //初始化级别
+	  //初始化级别，广度优先的遍历
 	  initLevel(dataList){
 		  if(dataList.length>0){
 			  	let arr= dataList
@@ -184,7 +184,7 @@ export default {
 	  //找到整个树形结构上当前节点上级节点,()
 	  /**
 	   * node 需要查找的节点
-	   * flag,如果是正整数，代表往上找的层数，如果是0，打标找到最顶层 
+	   * flag,如果是正整数，代表往上找的层数，如果是0，代表找到最顶层 
 	   * */
 	  getAllFatherNode(node,flag){
 		  let fathersNode = []
