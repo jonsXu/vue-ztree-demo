@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve --mode dev",
-    "build": "vue-cli-service build --mode prd",
+    "build": "vue-cli-service build",
+    "build:prd": "vue-cli-service build --mode prd",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

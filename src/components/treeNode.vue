@@ -114,7 +114,7 @@ export default {
 			//全选
 			className = 'checkbox_true_full'
 		}
-		return className+`${this.pro=='development'?'dev':'pro'}`
+		return className+` ${this.pro=='development'?'dev':'pro'}`
 	}
   },
   data(){
